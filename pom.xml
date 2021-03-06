@@ -14,7 +14,6 @@
 	<name>StonksMMOUserBackend</name>
 	<description>User Backend for Stonks MMO </description>
 	<properties>
-		<java.version>11</java.version>
 		<spring-cloud.version>Hoxton.SR10</spring-cloud.version>
 	</properties>
 	<dependencies>
