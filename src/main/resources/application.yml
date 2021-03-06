@@ -19,11 +19,11 @@ spring:
     database: mysql
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
   datasource:
-      url: jdbc:mysql://localhost:3306/stonkmmousers
-      username: root
-      password: root
+      url: jdbc://mysql://b3595316435fef:55db0038@us-cdbr-east-03.cleardb.com/heroku_9cc9073b421fcb2?reconnect=true
+      username: b3595316435fef
+      password: 55db0038
       driver-class-name: com.mysql.jdbc.Driver
 
 
@@ -46,7 +46,7 @@ eureka:
 zuul:
   routes:
     service_1:
-      path: http://localhost:8081/
+      path: https://stonkszuuluserbackend.herokuapp.com/
   prefix: /api
 
 
