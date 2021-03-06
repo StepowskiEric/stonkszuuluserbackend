@@ -1,0 +1,52 @@
+com:
+  stonksmmo:
+    StonksMMOUserBackend:
+      jwtSecret: AZGGHKDARTFHAWUID1244SDAFD243T5WQRSNA1294817lMagbda
+
+stonksJwtExpirationTime:
+  jwtExpirationMs: 840000000
+
+
+
+
+
+
+spring:
+  cloud:
+    discovery:
+      enabled: true
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+      url: jdbc:mysql://localhost:3306/stonkmmousers
+      username: root
+      password: root
+      driver-class-name: com.mysql.jdbc.Driver
+
+
+
+
+
+
+debug: true
+
+
+eureka:
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:8090/eureka
+      server.port: 8079
+    fetch-registry: false
+zuul:
+  routes:
+    service_1:
+      path: http://localhost:8081/
+  prefix: /api
+
+
